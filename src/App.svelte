@@ -1,16 +1,20 @@
 <script>
 let name =  "John";
-
+let newColor = '';
 const  handleName = ()  =>{
 	name = "Arjo"
+}
+
+const handleColor  = (e) =>{
+	newColor = e.target.value
 }
 </script>
 
 
 <main>
-	<h1>Hello {name}!</h1>
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<p on:click={handleName}>Hello John!</p>
+	<h1 style={"color:"+newColor}>Hello {name}!</h1>
+	<p>{newColor}</p>
+	<input type="text" on:change={(e)=>handleColor(e)}>
 </main>
 
 <style>
