@@ -20,8 +20,10 @@ const handleColor  = (e) =>{
 	<input type="text" bind:value={newColor}>
 
 	{#each people as person }
-		<h1>{person.name}</h1>
-		<h1>{person.age}</h1>
+		<h1 style="color:{newColor}">{person.name}</h1>
+		<h1 style="color:{newColor}">{person.age}</h1>
+		{:else}
+		<p>There is no any person today</p>
 	{/each}
 </main>
 
