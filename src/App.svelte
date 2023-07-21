@@ -2,7 +2,7 @@
 let name =  "John";
 let newColor = '';
 
-const people = [{name:'John',age:11},{name:'Aldo',age:1},{name:'Aline',age:2},{name:'Nkaka',age:1}]
+let people = [{name:'John',age:11, id:1},{name:'Aldo',age:1, id:2},{name:'Aline',age:2, id:3},{name:'Nkaka',age:1}]
 
 const  handleName = ()  =>{
 	name = "Arjo"
@@ -11,8 +11,11 @@ const  handleName = ()  =>{
 const handleColor  = (e) =>{
 	newColor = e.target.value
 }
-</script>
 
+const handleDelete = (id) =>{
+	people = people.filter(person => person.id !== id);
+}
+</script>
 
 <main>
 	<h1 style="color:{newColor}">Hello {name}!</h1>
@@ -22,6 +25,7 @@ const handleColor  = (e) =>{
 	{#each people as person }
 		<h1 style="color:{newColor}">{person.name}</h1>
 		<h1 style="color:{newColor}">{person.age}</h1>
+		<button on:click={()=>handleDelete(person.id)}>Delete</button>
 		{:else}
 		<p>There is no any person today</p>
 	{/each}
