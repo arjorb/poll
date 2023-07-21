@@ -12,9 +12,9 @@ const handleColor  = (e) =>{
 
 
 <main>
-	<h1 style={"color:"+newColor}>Hello {name}!</h1>
+	<h1 style="color:{newColor}">Hello {name}!</h1>
 	<p>{newColor}</p>
-	<input type="text" on:input={(e)=>handleColor(e)}  value={newColor}>
+	<input type="text" bind:value={newColor}>
 </main>
 
 <style>
