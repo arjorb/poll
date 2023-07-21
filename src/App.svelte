@@ -1,10 +1,16 @@
 <script>
-	export let name;
+let name =  "John";
+
+const  handleName = ()  =>{
+	name = "Arjo"
+}
 </script>
+
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<p on:click={handleName}>Hello John!</p>
 </main>
 
 <style>
