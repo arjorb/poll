@@ -24,6 +24,9 @@ const handleDelete = (id) =>{
 
 	{#each people as person }
 		<h1 style="color:{newColor}">{person.name}</h1>
+		{#if person.age > 10}
+		<p>Allowed to drink Juice</p>
+		{/if}
 		<h1 style="color:{newColor}">{person.age}</h1>
 		<button on:click={()=>handleDelete(person.id)}>Delete</button>
 		{:else}
