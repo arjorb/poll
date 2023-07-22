@@ -1,8 +1,9 @@
 <script>
-let name =  "John";
-let newColor = '';
+	import Modal from "./Modal.svelte";
+	let name =  "John";
+	let newColor = '';
 
-let people = [{name:'John',age:11, id:1},{name:'Aldo',age:1, id:2},{name:'Aline',age:2, id:3},{name:'Nkaka',age:1}]
+	let people = [{name:'John',age:11, id:1},{name:'Aldo',age:1, id:2},{name:'Aline',age:2, id:3},{name:'Nkaka',age:1}]
 
 const  handleName = ()  =>{
 	name = "Arjo"
@@ -18,6 +19,7 @@ const handleDelete = (id) =>{
 </script>
 
 <main>
+	<Modal/>
 	<h1 style="color:{newColor}">Hello {name}!</h1>
 	<p>{newColor}</p>
 	<input type="text" bind:value={newColor}>
