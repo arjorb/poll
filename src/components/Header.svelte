@@ -1,6 +1,12 @@
 <header>
-    <h1>
-        <img src="" alt="Poll Logo">
-    </h1>
+    <h1>Poll Logo</h1>
 </header>
-<style></style>
+<style>
+    header{
+        background: #f7f7f7;
+        text-align: center;
+    }
+    h1{
+        padding: 50px;
+    }
+</style>
