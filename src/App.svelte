@@ -19,7 +19,7 @@
 	}
 
 	const handlePromo = () => {
-		showModal = showModal  == false ? true : false
+		showModal = !showModal
 	}
 </script>
 
