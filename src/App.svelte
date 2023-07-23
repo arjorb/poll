@@ -2,7 +2,7 @@
 	import Modal from "./Modal.svelte";
 	let name =  "John";
 	let newColor = '';
-	let showModal = true;
+	let showModal = false;
 
 	let people = [{name:'John',age:11, id:1},{name:'Aldo',age:1, id:2},{name:'Aline',age:2, id:3},{name:'Nkaka',age:1}]
 
