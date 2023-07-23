@@ -21,7 +21,7 @@
 
 <main>
 	{#if showModal}
-	<Modal/>
+	<Modal message='This is a promotion that we are offfering'/>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
 	<p>{newColor}</p>

@@ -1,8 +1,9 @@
 <script>
+    export let message = 'I am a Modal'
 </script>
 <main>
     <div class="backdrop">
-        <div class="modal">I am a Modal</div>
+        <div class="modal">{message}</div>
     </div>
 </main>
 <style>
