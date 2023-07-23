@@ -1,9 +1,10 @@
 <script>
     export let message = 'I am a Modal'
-    export let isPromo  = false
+    export let isPromo  = false;
+    export let handlePromo;
 </script>
 <main>
-    <div class="backdrop">
+    <div on:click={handlePromo} class="backdrop">
         <div class="modal" class:promo={isPromo}>{message}</div>
     </div>
 </main>

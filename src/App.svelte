@@ -17,13 +17,18 @@
 	const handleDelete = (id) =>{
 		people = people.filter(person => person.id !== id);
 	}
+
+	const handlePromo = () => {
+		showModal = showModal  == false ? true : false
+	}
 </script>
 
 <main>
 	{#if showModal}
-	<Modal message='This is a promotion that we are offfering' isPromo={true}/>
+	<Modal message='This is a promotion that we are offfering' isPromo={true} handlePromo={handlePromo}/>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
+	<button on:click={handlePromo}>Promotion is Here</button>
 	<p>{newColor}</p>
 	<input type="text" bind:value={newColor}>
 
