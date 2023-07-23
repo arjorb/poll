@@ -3,7 +3,7 @@
     export let isPromo  = false;
 </script>
 <main>
-    <div on:click class="backdrop">
+    <div on:click|self class="backdrop">
         <div class="modal" class:promo={isPromo}>{message}</div>
     </div>
 </main>
