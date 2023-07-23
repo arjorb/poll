@@ -1,5 +1,7 @@
 <script>
-  import { createEventDispatcher } from "svelte/types/runtime/internal/lifecycle";
+  import { createEventDispatcher } from "svelte";
+
+
 
     const dispatch  = createEventDispatcher();
     let name;
@@ -10,7 +12,7 @@
             name,
             age,
             id: Math.random()
-        }
+        };
         dispatch("addPerson", person);
     }
 </script>

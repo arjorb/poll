@@ -20,13 +20,19 @@ import Modal from "./Modal.svelte";
 	const handlePromo = () => {
 		showModal = !showModal
 	}
+
+	const addPerson = (e)  =>{
+		people  =  [e.detail,  ...people];
+		showModal= false;
+	}
+
 </script>
 
 <main>
 	{#if showModal}
 	<Modal  isPromo={true} on:click={handlePromo}>
 	<h3>Add New Person</h3>
-	<AddPersonForm/>
+	<AddPersonForm on:addPerson={addPerson}/>
 	</Modal>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
