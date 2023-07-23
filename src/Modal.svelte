@@ -4,7 +4,9 @@
 </script>
 <main>
     <div on:click|self class="backdrop">
-        <div class="modal" class:promo={isPromo}>{message}</div>
+        <div class="modal" class:promo={isPromo}>
+        <slot></slot>
+        </div>
     </div>
 </main>
 <style>

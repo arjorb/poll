@@ -10,9 +10,6 @@
 		name = "Arjo"
 	}
 
-	const handleColor  = (e) =>{
-		newColor = e.target.value
-	}
 
 	const handleDelete = (id) =>{
 		people = people.filter(person => person.id !== id);
@@ -25,10 +22,17 @@
 
 <main>
 	{#if showModal}
-	<Modal message='This is a promotion that we are offfering' isPromo={true} on:click={handlePromo}/>
+	<Modal  isPromo={true} on:click={handlePromo}>
+	<h3>Add New Person</h3>
+	<form action="">
+	<input type="text" placeholder="Enter the name">
+	<input type="text" placeholder="Enter the ages">
+	<button>Add Person</button>
+	</form>
+	</Modal>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
-	<button on:click|once={handlePromo}>Promotion is Here</button>
+	<button on:click={handlePromo}>Promotion is Here</button>
 	<p>{newColor}</p>
 	<input type="text" bind:value={newColor}>
 
