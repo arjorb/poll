@@ -28,7 +28,7 @@
 	<Modal message='This is a promotion that we are offfering' isPromo={true} on:click={handlePromo}/>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
-	<button on:click={handlePromo}>Promotion is Here</button>
+	<button on:click|once={handlePromo}>Promotion is Here</button>
 	<p>{newColor}</p>
 	<input type="text" bind:value={newColor}>
 
