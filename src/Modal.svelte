@@ -1,6 +1,6 @@
 <script>
     export let message = 'I am a Modal'
-    const isPromo  = true
+    export let isPromo  = false
 </script>
 <main>
     <div class="backdrop">
