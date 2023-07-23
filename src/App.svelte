@@ -25,7 +25,7 @@
 
 <main>
 	{#if showModal}
-	<Modal message='This is a promotion that we are offfering' isPromo={true} handlePromo={handlePromo}/>
+	<Modal message='This is a promotion that we are offfering' isPromo={true} on:click={handlePromo}/>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
 	<button on:click={handlePromo}>Promotion is Here</button>
