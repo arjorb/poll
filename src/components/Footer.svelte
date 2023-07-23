@@ -9,5 +9,7 @@
     .copyright{
         color: #aaa;
         border-top: 1px solid #ddd;
+        display: inline-block;
+        padding: 20px;
     }
 </style>
