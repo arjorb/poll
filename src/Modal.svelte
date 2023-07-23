@@ -1,9 +1,10 @@
 <script>
     export let message = 'I am a Modal'
+    const isPromo  = true
 </script>
 <main>
     <div class="backdrop">
-        <div class="modal">{message}</div>
+        <div class="modal" class:promo={isPromo}>{message}</div>
     </div>
 </main>
 <style>
@@ -22,5 +23,9 @@
         margin: 50px auto;
         padding: 30px 70px;
         border-radius: 10px;
+    }
+    .promo{
+        background-color: rgb(9, 75, 91);
+        color: white;
     }
 </style>
