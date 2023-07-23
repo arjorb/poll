@@ -1,5 +1,7 @@
 <script>
-	import Modal from "./Modal.svelte";
+  import AddPersonForm from "./AddPersonForm.svelte";
+import Modal from "./Modal.svelte";
+	
 	let name =  "John";
 	let newColor = '';
 	let showModal = false;
@@ -24,11 +26,7 @@
 	{#if showModal}
 	<Modal  isPromo={true} on:click={handlePromo}>
 	<h3>Add New Person</h3>
-	<form action="">
-	<input type="text" placeholder="Enter the name">
-	<input type="text" placeholder="Enter the ages">
-	<button>Add Person</button>
-	</form>
+	<AddPersonForm/>
 	</Modal>
 	{/if}
 	<h1 style="color:{newColor}">Hello {name}!</h1>
