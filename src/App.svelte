@@ -4,13 +4,17 @@
   import Tabs from "./components/shared/Tabs.svelte";
 
   const items =  ['Current Polls', 'Add New Polls'];
-  const ActiveItem = 'Current Polls';
+  let activeItem = 'Current Polls';
 
+
+  const  handleTabs  = (e) =>{
+	activeItem = e.detail
+  }
 </script>
 
 <Header/>
 <main>
-	<Tabs {items} {ActiveItem}/>
+	<Tabs {items} {activeItem} on:changeTab={handleTabs}/>
 </main>
 <Footer/>
 <style>

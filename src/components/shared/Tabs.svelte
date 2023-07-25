@@ -1,12 +1,15 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
+    const dispatch = createEventDispatcher()
     export let items  =  [];
-    export let ActiveItem;
+    export let activeItem;
 </script>
 <main>
     {#each items as item }
         <ul>
             <li>
-                <div class:active={item === ActiveItem}> {item}</div>
+                <div class:active={item === activeItem} on:click={()=>dispatch('changeTab', item)}> {item}</div>
             </li>
         </ul>
     {/each}
@@ -20,6 +23,10 @@
     ul{
         list-style: none
     }
+    li{
+           font-size: 20px;
+           cursor: pointer;
+        }
     .active{
         color: orange;
         text-decoration: underline;
