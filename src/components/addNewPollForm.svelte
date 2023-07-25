@@ -1,4 +1,7 @@
 <script>
+  import Button from "./shared/Button.svelte";
+
+    
     const fields = {
         question:'',
         answerA: '',
@@ -20,8 +23,7 @@
         <div class="form-group">
             <input type="text" placeholder="Answer B"  bind:value={fields.answerB}>
         </div>
-
-        <button>Submit</button>
+        <Button>Submit</Button>
     </form>
 </main>
 <style>
@@ -33,12 +35,6 @@
         margin: 10px 0;
     }
     .form-group input{
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    button{
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
