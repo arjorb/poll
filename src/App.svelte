@@ -15,6 +15,11 @@
 <Header/>
 <main>
 	<Tabs {items} {activeItem} on:changeTab={handleTabs}/>
+	{#if activeItem  === 'Current Polls'}
+	<p>This is a page of the Current Pools</p>
+	{:else if activeItem === 'Add New Polls'}
+	<p>This is a page of the Add New Polls</p>
+	{/if}
 </main>
 <Footer/>
 <style>
