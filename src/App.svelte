@@ -17,6 +17,7 @@
   const handleAddNewPool = (e) =>{
 	polls = [e.detail,  ...polls]
 	console.log('From App Component:',polls)
+	activeItem = 'Current Polls'
   }
 </script>
 
