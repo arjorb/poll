@@ -3,7 +3,7 @@
   $: totalVotes = poll.voteA + poll.voteB;
 </script>
 
-<div>
+<div class="poll">
   <h3>{poll.question}</h3>
   <p>Total votes: {totalVotes}</p>
   <div class="answer">
@@ -17,4 +17,28 @@
   </div>
 </div>
 
-<style></style>
+<style>
+  h3 {
+    color: #555;
+    margin: 0 auto;
+  }
+  p {
+    margin-top: 6;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 30px;
+  }
+  .answer {
+    background-color: #fafafa;
+    cursor: pointer;
+    margin: 10px auto;
+    position: relative;
+  }
+  .answer:hover {
+    opacity: 0.6;
+  }
+  span {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+</style>
