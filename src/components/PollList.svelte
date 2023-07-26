@@ -8,4 +8,9 @@
   {/each}
 </main>
 
-<style></style>
+<style>
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+</style>
