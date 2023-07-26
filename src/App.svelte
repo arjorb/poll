@@ -46,7 +46,7 @@
 <main>
   <Tabs {items} {activeItem} on:changeTab={handleTabs} />
   {#if activeItem === 'Current Polls'}
-    <PollList {polls} on:vote={handleVote} />
+    <PollList on:vote={handleVote} />
   {:else if activeItem === 'Add New Polls'}
     <AddNewPollForm on:add={handleAddNewPool} />
   {/if}
