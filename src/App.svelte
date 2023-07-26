@@ -7,10 +7,16 @@
 
   const items =  ['Current Polls', 'Add New Polls'];
   let activeItem = 'Current Polls';
+  let  polls = [{question: 'Pyton or JavaScript', answerA: 'JavaScript', answerB: 'Pyton', voteA:10, voteB:10, id: 1}]
 
 
   const  handleTabs  = (e) =>{
 	activeItem = e.detail
+  }
+
+  const handleAddNewPool = (e) =>{
+	polls = [e.detail,  ...polls]
+	console.log('From App Component:',polls)
   }
 </script>
 
@@ -20,7 +26,7 @@
 	{#if activeItem  === 'Current Polls'}
 	<p>This is a page of the Current Pools</p>
 	{:else if activeItem === 'Add New Polls'}
-	<AddNewPollForm/>
+	<AddNewPollForm on:add={handleAddNewPool}/>
 	{/if}
 </main>
 <Footer/>
