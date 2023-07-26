@@ -6,7 +6,7 @@
 
 <main>
   {#each polls as poll (poll.id)}
-    <PollItem {poll} />
+    <PollItem {poll} on:vote />
   {/each}
 </main>
 

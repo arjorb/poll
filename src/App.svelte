@@ -27,13 +27,26 @@
     console.log('From App Component:', polls);
     activeItem = 'Current Polls';
   };
+
+  const handleVote = e => {
+    const { option, id } = e.detail;
+    const newVotes = [...polls];
+    const selectedPoll = newVotes.find(poll => poll.id == id);
+    if (option === 'a') {
+      selectedPoll.voteA++;
+    }
+    if (option === 'b') {
+      selectedPoll.voteB++;
+    }
+    polls = newVotes;
+  };
 </script>
 
 <Header />
 <main>
   <Tabs {items} {activeItem} on:changeTab={handleTabs} />
   {#if activeItem === 'Current Polls'}
-    <PollList {polls} />
+    <PollList {polls} on:vote={handleVote} />
   {:else if activeItem === 'Add New Polls'}
     <AddNewPollForm on:add={handleAddNewPool} />
   {/if}
