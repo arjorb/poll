@@ -13,7 +13,7 @@
       answerA: 'JavaScript',
       answerB: 'Pyton',
       voteA: 10,
-      voteB: 10,
+      voteB: 15,
       id: 1,
     },
   ];
