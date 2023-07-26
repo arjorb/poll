@@ -1,21 +1,33 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  import Card from './shared/Card.svelte';
+
   export let poll;
   $: totalVotes = poll.voteA + poll.voteB;
+
+  const dispatch = createEventDispatcher();
+  const handleVote = (option, id) => {
+    dispatch('vote', { option, id });
+  };
 </script>
 
-<div class="poll">
-  <h3>{poll.question}</h3>
-  <p>Total votes: {totalVotes}</p>
-  <div class="answer">
-    <div class="percent percent-a" />
-    <span>{poll.answerA} ({poll.voteA})</span>
-  </div>
+<Card>
+  <div class="poll">
+    <h3>{poll.question}</h3>
+    <p>Total votes: {totalVotes}</p>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="answer" on:click={() => handleVote('a', poll.id)}>
+      <div class="percent percent-a" />
+      <span>{poll.answerA} ({poll.voteA})</span>
+    </div>
 
-  <div class="answer">
-    <div class="percent percent-b" />
-    <span>{poll.answerB} ({poll.voteB})</span>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <div class="answer" on:click={() => handleVote('b', poll.id)}>
+      <div class="percent percent-b" />
+      <span>{poll.answerB} ({poll.voteB})</span>
+    </div>
   </div>
-</div>
+</Card>
 
 <style>
   h3 {
