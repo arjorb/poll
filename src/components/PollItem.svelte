@@ -61,9 +61,11 @@
     box-sizing: border-box;
   }
   .percent-a {
+    border-left: 4px solid rgb(245, 0, 0);
     background-color: rgba(217, 27, 66, 0.2);
   }
   .percent-b {
+    border-left: 4px solid rgb(0, 190, 108);
     background-color: rgba(69, 196, 150, 0.2);
   }
 </style>
