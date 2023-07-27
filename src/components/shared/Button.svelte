@@ -1,12 +1,16 @@
 <script></script>
-<button>
-    <slot></slot>
-</button>
+
+<div>
+  <button>
+    <slot />
+  </button>
+</div>
+
 <style>
-    button{
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 </style>
