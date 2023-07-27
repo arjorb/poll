@@ -2,19 +2,12 @@
   import PollStore from '../store/PollStore';
   import Button from './shared/Button.svelte';
   import Card from './shared/Card.svelte';
-  import { tweened } from './svelte/motion';
 
   export let poll;
 
   $: totalVotes = poll.voteA + poll.voteB;
-  $: percentA = Math.floor((100 / totalVotes) * poll.voteA);
-  $: percentB = Math.floor((100 / totalVotes) * poll.voteB);
-
-  const tweenedA = tweened(0);
-  const tweenedB = tweened(0);
-
-  $: tweenedA.set(percentA);
-  $: tweenedB.set(percentB);
+  $: percentA = Math.floor((100 / totalVotes) * poll.voteA) || 0;
+  $: percentB = Math.floor((100 / totalVotes) * poll.voteB) || 0;
 
   const handleVote = (option, id) => {
     PollStore.update(currentPolls => {
