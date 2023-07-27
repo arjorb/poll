@@ -5,7 +5,7 @@
 
 <main>
   {#each $PollStore as poll (poll.id)}
-    <PollItem {poll} on:vote />
+    <PollItem {poll} />
   {/each}
 </main>
 
